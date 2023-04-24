@@ -3,7 +3,7 @@ const CACHE_NAME = 'v1_medSync',
   urlsToCache = [
     './',
     './index.html',
-    './css/style.css',
+    './css/bootstrap.css',
     './script.js',
     './sw.js',
     './resources'
