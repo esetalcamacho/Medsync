@@ -31,36 +31,46 @@
   <!-- Sidebar -->
   <div class="container-fluid">
     <div class="row flex-nowrap">
-      <div class="bg-dark col-auto col-md-2 min-vh-100">
-        <div class="bg-dark p-2">
+      <div class="side-bar col-auto col-md-3 col-lg-2 min-vh-100 d-flex flex-column justify-content-between">
+        <div class="p-2">
           <a class="d-flex text-decoration-none mt-2 align-items-center text-white">
-            <span class="fs-4 d-none d-sm-inline">MedSync</span></i>
+            <span class="fs-2 d-none d-sm-inline">MedSync</span></i>
           </a>
           <ul class="nav nav-pills flex-column mt-2">
-            <li class="nav-item">
+            <li class="nav-item py-2 py-sm-0">
               <a href="#" class="nav-link text-white" aria-current="page">
-                <i class="fs-4 bi bi-house-door-fill"></i><span class="fs-4 d-none d-sm-inline"> Home</span>
+                <i class="fs-5 bi bi-house-door-fill"></i><span class="fs-5 d-none d-sm-inline"> Home</span>
               </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item py-2 py-sm-0">
               <a href="#" class="nav-link text-white" aria-current="page">
-                <i class="fs-4 bi bi-speedometer"></i><span class="fs-4 d-none d-sm-inline"> Relatorio</span>
+                <i class="fs-5 bi bi-speedometer"></i><span class="fs-5 d-none d-sm-inline"> Relatorio</span>
               </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item py-2 py-sm-0">
               <a href="#" class="nav-link text-white" aria-current="page">
-                <i class="fs-4 bi bi-receipt-cutoff"></i><span class="fs-4 d-none d-sm-inline"> Criar Pedido</span>
+                <i class="fs-5 bi bi-receipt-cutoff"></i><span class="fs-5 d-none d-sm-inline"> Criar Pedido</span>
               </a>
             </li>
           </ul>
         </div>
+        <div class="dropdown open p-3 col-auto col-md-3 col-lg-2">
+          <button class="btn border-none dropdown-toggle text-white" type="button" id="triggerId"
+            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fs-5 bi bi-person-circle"></i>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="triggerId">
+            <button class="dropdown-item" href="#">Configuracoes</button>
+            <button class="dropdown-item" href="#">Sair</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+  <!-- Contenido -->
+  <div></div>
   <!-- Script ServiceWorker -->
   <script src="./script.js"></script>
-  <!-- Archivos JavaScript de Bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
 </body>
 </body>
 
