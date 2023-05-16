@@ -5,10 +5,51 @@
 
 .side-bar {
     background-color: #0a0442;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .nav-pills li a:hover {
     background-color: #2A2F4F;
+}
+
+/* Ocultamos los textos de "Home", "Relatorio" y "Criar Pedido" en dispositivos móviles */
+@media (max-width: 767.98px) {
+    .nav-link .d-none {
+        display: none !important;
+    }
+}
+
+/* Centramos los íconos en dispositivos móviles */
+.nav-link {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Arreglamos aqui el esbordamiento de texto en el título y enlaces del menú */
+.side-bar a {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Estilos del botón de configuraciones y salir */
+.dropdown-menu {
+    min-width: 0;
+}
+
+.dropdown-item {
+    white-space: nowrap;
 }
 
 /*Login Page*/
@@ -19,15 +60,77 @@
     position: relative;
 }
 
-.color-overlay{
+.color-overlay {
     position: absolute;
     width: 100%;
     height: 100%;
     background-color: rgba(37, 37, 37, 0.5);
 }
 
-@media (max-width: 768px){
-    .masthead{
+@media (max-width: 768px) {
+    .masthead {
         min-height: 30vh;
     }
+}
+
+/* Ancho de la barra lateral según el contenido que mostremos */
+.side-bar {
+    width: auto;
+    padding: 0;
+}
+
+.side-bar .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.side-bar .nav-link {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+}
+
+.side-bar .nav-link i {
+    margin-right: 0.5rem;
+}
+
+.fs-3 {
+    margin: 1rem 0;
+    text-align: center;
+    width: 100%;
+}
+
+.dropdown {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Dispositivos móviles */
+@media (max-width: 767.98px) {
+    .nav-pills .nav-link {
+        padding: 0.1rem 0.2rem;
+    }
+
+    .side-bar {
+        padding: 0.5rem;
+    }
+
+    .nav-link i {
+        margin-right: 0;
+        font-size: 1.2rem;
+    }
+
+}
+
+.da-cliente{
+    background-color: aqua;
+}
+
+.da-planta{
+    background-color: red;
 }
