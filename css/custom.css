@@ -128,9 +128,21 @@
 }
 
 .da-cliente{
-    background-color: aqua;
+    background-color: aliceblue;
+    border-radius: 3px;
+    padding-left: 20px;
 }
 
 .da-planta{
     background-color: red;
+    height: 400px;
+}
+
+.prueba{
+    width: 1320px;
+    background-color: gray;
+}
+
+.cnpj{
+    width: fit-content;
 }
