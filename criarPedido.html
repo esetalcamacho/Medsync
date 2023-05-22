@@ -70,7 +70,8 @@
       </div>
       <!-- Content -->
       <div class="container prueba">
-        <div class="row">
+        <h2>Criar pedido</h2>
+        <div class="row border border-light-subtle my-3">
           <div class="col da-cliente">
             <div class="row">
               <div class="form-group cnpj mb-3">
@@ -191,6 +192,36 @@
                 <label class="form-check-label" for="fornecimento-completo">Fornecimento completo</label>
               </div>
             </div>
+        </div>
+      </div>
+      <div class="row productos border border-light-subtle">
+        <div class="col">
+          <table class="table">
+            <thead>
+              <tr class="titulos">
+                <th>CFN</th>
+                <th>Descrição</th>
+                <th>Qty</th>
+                <th>UM</th>
+                <th>Lote/Serial</th>
+                <th>Precio</th>
+                <th>Subtotal</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="text" class="form-control" name="cfn" /></td>
+                <td><input type="text" class="form-control" name="descri" readonly /></td>
+                <td><input type="number" class="form-control" name="qty" /></td>
+                <td><input type="number" class="form-control" name="um" readonly /></td>
+                <td><input type="text" class="form-control" name="lote" /></td>
+                <td><input type="number" class="form-control" name="precio" /></td>
+                <td><input type="number" class="form-control" name="subtotal" readonly /></td>
+                <td><button type="button" class="btn btn-danger btn-sm eliminar-fila">Eliminar</button></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
