@@ -1,27 +1,23 @@
 <?php
-error_reporting(E_ALL);
 //Conexion DB
-$pdo = new PDO("mysql:host=localhost;dbname=medsync", "root", "");
+$connection = mysqli_connect("localhost", "root", "", "medsync");
+// Query Sold-to e end Receiver
+$term = $_GET['term']; // Obtenemos el termino de busqueda de CNPJ
+// $term2 = $_GET['term2'];
 
-if (!$pdo) {
-    die("Error de conexión: " . mysqli_connect_error());
-} else {
-    echo "¡Conexión exitosa a la base de datos!";
+// $cnpj = "SELECT CNPJ, SAP_CODE, Nombre, tipo_cliente FROM clientes WHERE CNPJ LIKE '%".$term."%' OR SAP_CODE LIKE '%".$term."%'";
+$cnpj = "SELECT CNPJ, SAP_CODE, Nombre, tipo_cliente FROM clientes WHERE CNPJ LIKE '%".$term."%'";
+$resultCliente = mysqli_query($connection, $cnpj);
+
+$datos = array();
+while ($row = mysqli_fetch_assoc($resultCliente)) {
+    $item = array(
+        'label' => $row['CNPJ'],
+        'sapCode' => $row['SAP_CODE'],
+        'nome' => $row['Nombre'],
+        'tipoCliente' => $row['tipo_cliente']
+    );
+    $datos[] = $item;
 }
 
-if (isset($_GET['term'])) {
-    $term = $_GET['term'];
-
-    $stmt = $pdo->prepare("SELECT CNPJ FROM clientes WHERE CNPJ LIKE :term");
-    $stmt->bindValue(':term', '%' . $term . '%');
-    $stmt->execute();
-
-    $sugerencias = array();
-    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        $sugerencias[] = $row['cnpj'];
-    }
-
-    echo json_encode($sugerencias);
-}
-?>
-?>
+echo json_encode($datos);
