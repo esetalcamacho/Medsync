@@ -3,7 +3,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -19,6 +19,8 @@
   <link rel="stylesheet" href="./jquery/jquery-ui.css">
   <script src="./jquery/jquery-ui.js"></script>
   <script src="./autocompletado.js"></script>
+  <!-- Libreria de Zona Horario JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
   <!-- Stylesheet -->
   <link rel="stylesheet" href="./css/custom.css">
   <meta http-equiv=”Cache-Control” content=”no-cache” />
@@ -110,11 +112,8 @@
                 <input type="text" name="nombre-end" id="nombre-end" class="form-control my-1 mb-3"
                   placeholder="Rede Dor" value="" readonly>
                 <label for="cidades" class="form-label">Cidade</label>
-                <select class="form-select" name="cidade-cliente" id="cidade-cliente">
-                  <option selected>Seleção</option>
-                  <option value="">Sao Paulo SP</option>
-                  <option value="">Vitoria</option>
-                </select>
+                <input type="text" name="cidade-cliente" id="cidade-cliente" class="form-control" value="" readonly>
+                </input>
               </div>
               <div class="form-group col">
                 <label for="nome-paciente">Nome paciente:</label>
@@ -126,7 +125,7 @@
               </div>
               <div class="form-group col">
                 <label for="data-cirurgia">Data de cirurgia:</label>
-                <input type="date" name="data-cirurgia" id="data-cirurgia" class="form-control  my-2">
+                <input type="text" name="data-cirurgia" id="data-cirurgia" class="form-control  my-2">
               </div>
             </div>
             <div class="row">
@@ -222,11 +221,11 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><input type="text" class="form-control" name="cfn" /></td>
-                  <td><input type="text" class="form-control" name="descri" readonly /></td>
-                  <td><input type="number" class="form-control" name="qty" /></td>
-                  <td><input type="number" class="form-control" name="um" readonly /></td>
-                  <td><input type="text" class="form-control" name="lote" /></td>
+                  <td><input type="text" id="cfn" class="form-control" name="cfn"/></td>
+                  <td><input type="text" id="descri" class="form-control" name="descri" readonly /></td>
+                  <td><input type="number" id="qty" class="form-control" name="qty" /></td>
+                  <td><input type="number" id = "um" class="form-control" name="um" readonly /></td>
+                  <td><input type="text" id="lote" class="form-control" name="lote" id="lote"/></td>
                   <td><input type="number" class="form-control" name="precio" /></td>
                   <td><input type="number" class="form-control" name="subtotal" readonly /></td>
                   <td><button type="button" class="btn btn-danger btn-sm eliminar-fila">Eliminar</button></td>
