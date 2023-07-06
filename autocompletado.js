@@ -1,5 +1,5 @@
 // Esta funcion nos ayuda a order la informacion y llenar los cmapos con base en nuestra consulta
-$(document).ready(function () {
+$(document).ready(function autocompletado() {
     $("#cnpjSold").autocomplete({
         source: "busquedaCliente.php",
         select: function (event, ui) {

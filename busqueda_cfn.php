@@ -9,6 +9,7 @@ $term = $_GET['term'];
 $query = "SELECT CFN, Descricao, LOTE FROM inventario WHERE CFN LIKE '%" . $term . "%'";
 $result_cfn = mysqli_query($connection, $query);
 
+
 // Se organizan los resultados del producto
 
 $producto = array();
