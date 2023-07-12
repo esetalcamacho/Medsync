@@ -10,6 +10,13 @@ $(document).ready(function autocompletado() {
             $("#cidade-cliente").val(ui.item.direccion.Ciudad + ', ' + ui.item.direccion.Estado);
         }
     });
+    $("#cnpjShip").autocomplete({
+        source: "busquedaCliente.php",
+        select: function (event, ui) {
+            $("#ship-to").val(ui.item.sapCode);
+            $("#nombre-ship").val(ui.item.nome);
+        }
+    });
     $("#cnpjReceiver").autocomplete({
         source: "busquedaCliente.php",
         select: function (event, ui) {

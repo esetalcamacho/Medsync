@@ -145,3 +145,9 @@
 .titulos{
     text-align: center;
 }
+
+.precio-recuadro {
+    font-size: 22px; /* Tamaño de fuente grande */
+    font-weight: bold; /* Texto en negrita *//* Borde de 2px */
+    align-items: flex-end;
+  }
